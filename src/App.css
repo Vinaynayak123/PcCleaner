@@ -1,0 +1,1199 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&family=Roboto+Mono:wght@300&display=swap");
+
+body {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eaecf5;
+}
+.main-container {
+  background-color: #eaecf5;
+}
+
+.box {
+  width: 16vw;
+  height: 121px;
+  padding: 10px 0;
+  border: 1px solid #fff;
+  background-color: #232323;
+  cursor: pointer;
+}
+
+.box-containers {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: black;
+}
+.h3-box {
+  height: 45px;
+  font-size: unset;
+  margin-top: 10px;
+  background: black;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+}
+.box-icon {
+  height: 60px !important;
+  width: 60px !important;
+  color: #fff;
+}
+.scan-status {
+  margin: 1rem 0 0 1rem;
+  width: 41vw;
+  padding: 0 0 19px 20px;
+  background-color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.status-h4 {
+  font-weight: 300;
+  font-size: 18px;
+}
+.recommented-section {
+  margin-right: 6rem;
+  padding-top: 53px;
+}
+.recom-h5 {
+  margin: 9px 0 9px 0;
+}
+.recom-i {
+  color: blue;
+}
+.scan-h4 {
+  font-weight: 500;
+  font-size: 19px;
+  color: darkblue;
+}
+
+/* CSS */
+.button-scan {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(19, 3, 49, 0.4) 0 2px 4px,
+    rgb(57 16 143 / 30%) 0 7px 13px -3px, rgb(41 22 100 / 50%) 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+.start-container {
+  width: 503px;
+  margin: 3rem;
+}
+.scan-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* -----table-------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 50px 0 0 0;
+}
+.table-start {
+  margin: 30px 0 0 0;
+}
+.table-container {
+  width: 92vw;
+  margin-left: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+th {
+  background: rgb(7, 99, 122);
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 10px;
+  border: 1px solid rgb(7, 99, 122);
+  text-align: left;
+  font-size: 15px;
+}
+
+/* Media Query Start  */
+
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  table {
+    width: 100%;
+  }
+
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    /* Label the data */
+    content: attr(data-column);
+
+    color: #000;
+    font-weight: bold;
+  }
+}
+
+/* -----------Scan Registery---------- */
+
+.lastScreenResult {
+  margin: 20px;
+  border: 1px solid #969494;
+  background-color: #c4c4c4;
+  display: flex;
+  height: 30px;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.lastScreenResultSecond {
+  margin-left: 24px;
+  font-weight: 500;
+  height: fit-content;
+}
+
+.scanregistrysecondcontainerstart {
+  width: 90vw;
+  margin: 50px 0px 10px 20px;
+}
+
+.scanregistrysecondcontainerfirst {
+  display: grid;
+  margin: 0px 20px 5px 45px;
+  grid-template-columns: 20% 50% 30%;
+}
+
+.scanregistrysecondcontainerfirstkafirst img {
+  width: 10vw;
+  margin-top: -29px;
+}
+
+.viewissuesbtn button {
+  padding: 0px;
+  border: none;
+  color: blue;
+  background: none;
+  cursor: pointer;
+}
+
+.recommendedaction {
+  width: 19vw;
+  border: 1px solid #c4c4c4;
+  border-radius: 6px;
+  background-color: #d2cfcf;
+  text-align: center;
+  margin-left: 40px;
+}
+
+.scanregistrysecondcontainerfirstkathird {
+  text-align: center;
+}
+
+.recommendedactionpara {
+  margin: 1px 20px;
+}
+
+.none {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.selectcategoriestoscanmaindivsecond {
+  border-bottom: 1px solid #c4c4c4;
+  display: grid;
+  grid-template-columns: 20% 40% 40%;
+}
+
+.selectcategoriestoscanmaindivsecondfirst img {
+  width: 9vw;
+  padding: 13px 55px;
+}
+
+.selectcategoriestoscanmaindivsecondsecondfirst {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 22px 0px;
+}
+
+.systemdiv {
+  margin-left: 10px;
+}
+
+.systemrelatedissuse button {
+  border: none;
+  color: blue;
+  background: none;
+  font-weight: 500;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.computericon {
+  font-size: xx-large;
+}
+
+.issuesaffe {
+  font-size: small;
+  margin-left: 8px;
+}
+
+.startscan {
+  margin: 15px 15px 0 0;
+  display: flex;
+  justify-content: end;
+}
+
+.startscanfirst button {
+  padding: 10px;
+  background-color: green;
+  border: 1px solid greenyellow;
+  border-radius: 5px;
+  color: white;
+}
+.startscanfirst button:hover {
+  background-color: rgb(5, 177, 5);
+}
+
+/* ----------Dafrag-------- */
+
+.dafrag-h5 {
+  margin: 0 2rem 0 3rem;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.lastDafrag {
+  width: 46vw;
+  border: 1px solid #969494;
+  background-color: #c4c4c4;
+  display: flex;
+  height: 30px;
+  border-radius: 5px;
+}
+.lastDafrag-result {
+  margin: 5px 0 0 10px;
+  font-weight: 500;
+}
+
+.Dafrag-button {
+  display: flex;
+  column-gap: 25px;
+  margin: 51px 0 64px 3rem;
+}
+.lastDafrag-container {
+  display: flex;
+  column-gap: 25px;
+  margin-left: 3rem;
+}
+.Dafrag-icon {
+  height: 60px !important;
+  width: 60px !important;
+  color: rgb(134, 42, 233);
+}
+
+/* -------------Backup Registery------- */
+
+.backupregistry {
+  width: 95vw;
+  margin: 20px;
+  border: 1px solid #969494;
+  background-color: #c4c4c4;
+  display: flex;
+  height: 30px;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.backupregistrySecond {
+  margin-left: 24px;
+  font-weight: 500;
+  height: fit-content;
+}
+
+.backupseconddiv {
+  width: 92vw;
+  margin: 20px 0 20px 3rem;
+}
+
+.backupbutton {
+  margin: 0px 3rem;
+}
+
+.fullbackupandpartial {
+  width: 95vw;
+  padding: 10px;
+}
+.fullbackuppartialbackupbutton {
+  display: flex;
+  justify-content: end;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.fullbackuppartialbackupbutton button {
+  margin: 0px 10px;
+}
+.fullbackuppartialbackupbutton button:active {
+  border-bottom: 2px solid #c4c4c4;
+}
+
+.fullbackupcontent {
+  width: 95vw;
+  margin: 5px 20px;
+}
+
+/* ---------Start scan------------ */
+.StartScan {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.uppertextprogress div {
+  margin: 10px 10px 6px 50px;
+}
+
+.progress {
+  margin: 0px 10px 10px 50px;
+  height: 20px;
+  width: 88vw;
+  background-color: rgb(233, 236, 239);
+  border-radius: 4px;
+  border: 1px solid #c4c4c4;
+}
+.progress-bar {
+  background-color: #5468ff;
+  color: #fff;
+}
+
+.firstregistrysection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tableheading {
+  display: grid;
+  grid-template-columns: 38% 15% 15% 17% 12.5%;
+}
+
+.firstbox {
+  height: 40px;
+  padding: 10px 0px;
+  display: grid;
+  grid-template-columns: 40% 15% 15% 18% 10%;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.secondbox {
+  height: 50px;
+  padding: 10px 0px;
+  display: grid;
+  grid-template-columns: 40% 15% 15% 18% 10%;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.thirdbox {
+  height: 50px;
+  padding: 10px 0px;
+  display: grid;
+  grid-template-columns: 40% 15% 15% 18% 10%;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+.fourthbox {
+  height: 50px;
+  padding: 10px 0px;
+  display: grid;
+  grid-template-columns: 40% 15% 15% 18% 10%;
+  border-bottom: 1px solid #c4c4c4;
+}
+
+/* loader */
+
+.loader {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #595858;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.issuesfirst {
+  font-size: medium;
+  margin-top: 12px;
+}
+
+.issuessecond {
+  font-size: medium;
+  margin-top: 23px;
+}
+
+.issuesthird {
+  font-size: medium;
+  margin-top: 23px;
+}
+
+.issuesfour {
+  font-size: medium;
+  margin-top: 23px;
+}
+.recomendedactionfirst {
+  color: red;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.stopScanbtnmain {
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+
+.stopscanfirst {
+  font-size: smaller;
+  margin: 0 2rem 0 6rem;
+}
+
+.statuscontentsecond {
+  margin-top: 20px;
+}
+
+/* Hide the loader when percentage is 100 */
+
+.loader.complete {
+  display: none;
+}
+
+.recomendedactionfirst {
+  font-size: medium;
+  margin-top: 23px;
+}
+
+.stopScanbtnmain {
+  margin: 15px 0 0 0;
+  display: grid;
+  grid-template-columns: 52% 14% 15% 15%;
+}
+.removebutton{
+  cursor: pointer;
+}
+.removebutton button{
+  text-align: center;
+    width: 126px;
+    padding: 8px;
+}
+
+
+.removeclickbutton{
+  cursor: pointer;
+}
+.removeclickbutton button{
+  text-align: center;
+  width: 126px;
+    padding: 8px;
+}
+
+
+
+/* --------button------ */
+.stopscansecond-button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #2499c7;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14 px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.stopscansecond-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.stopscansecond-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+.stopscansecond-button:hover span {
+  padding-right: 15px;
+}
+.stopscansecond-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.statuscontentsecond {
+  margin-top: 20px;
+}
+
+.firstboxfirst {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: 10px 0px; */
+}
+
+.firstsection {
+  width: 90vw;
+  margin: auto;
+}
+
+.recomendedactionmain {
+  margin-top: 20px;
+}
+
+/* ------------setting------ */
+
+/* setting css*/
+
+.settingfirstbox {
+  padding: 10px;
+}
+
+.firstboxone {
+  padding: 20px 20px 0px 20px;
+}
+
+.firstboxone button {
+  width: 15vw;
+  padding: 5px;
+  margin: 5px 10px 0px 2px;
+  font-size: medium;
+}
+
+.firstboxone button:active {
+  border: 1px solid #586094;
+  border-bottom: none;
+}
+
+.generalfirstbar {
+  margin: 11px 0 10px 30px;
+  border: 1px solid #969494;
+  background-color: #c4c4c4;
+  display: flex;
+  height: 30px;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.generalsecondbar {
+  margin-left: 10px;
+  font-weight: 500;
+  height: fit-content;
+}
+
+.generalsecondboxone {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.selectinput {
+  width: 60vw;
+  background-color: #96949485;
+
+  color: #0c0c0c;
+  height: 30px;
+}
+
+.selectinput:active {
+  border: 1px solid #586094;
+}
+
+.firstearth {
+  text-align: center;
+}
+
+.firstearth img {
+  width: 65px;
+  height: 65px;
+}
+
+.checkbox {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.secondinputpara label {
+  margin: 0px 5px;
+}
+
+.bottomdiv {
+  margin-left: 10px;
+  width: 95vw;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #586094;
+}
+.setting-btn {
+  margin-left: 10px;
+  width: 95vw;
+  display: flex;
+  justify-content: end;
+  border-top: 1px solid #586094;
+}
+
+.bip {
+  margin: 0px 10px;
+}
+
+.bottomdiv button {
+  border: none;
+  width: 139px;
+}
+
+.scandiv {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 95vw;
+  justify-content: space-around;
+}
+
+.scanbox1 {
+  display: flex;
+}
+
+.firstsecond {
+  margin: 20px;
+}
+
+.scanspan {
+  background-color: #10b3db;
+  border: none;
+  color: white;
+  padding: 4px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.applybtn {
+  background-color: #2499c7;
+}
+.button1 {
+  background-color: rgb(69, 187, 241);
+  color: black;
+  border: 0.5px solid #2499c7;
+}
+
+.button1:hover {
+  background-color: #2499c7;
+  color: white;
+}
+.check-box {
+  margin-bottom: 7px;
+}
+.firstscandiv {
+  background: transparent;
+}
+.people-img {
+  height: 120px;
+  width: 120px;
+}
+.peoples-img {
+  height: 82px;
+  width: 77px;
+  margin-top: 20px;
+}
+
+/* --------Register  Form-------- */
+
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 65vw;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+
+.popup-content {
+  color: blue;
+}
+
+body.popup-open {
+  overflow: hidden;
+}
+
+body.popup-open main {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+body.popup-open .popup-container {
+  pointer-events: auto;
+}
+
+/* Reegister Now */
+.registernowfistpara {
+  display: flex;
+  padding-top: 5px;
+  justify-content: center;
+}
+
+.registernowfistpara p {
+  font-weight: 900;
+  color: #000;
+  margin: 0px;
+}
+
+.popupclosebtn {
+  position: absolute;
+  cursor: pointer;
+  top: 22px;
+  right: 32px;
+}
+
+.registernowalreadyhavekey {
+  display: flex;
+  padding-right: 10px;
+  /* margin: 10px 20px 20px 60px; */
+}
+
+.registernowimg img {
+  background-color: transparent;
+}
+
+.registernowalreadyhavekeyparttwo {
+  margin: 0px 0px 0px 5px;
+}
+
+.registernowalreadyhavekeyparttwo p {
+  color: rgb(246, 134, 55);
+  font-weight: 600;
+  margin: 2px;
+}
+
+.spanw {
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+}
+
+.registernowinputfirst {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.registernowinputfirst label {
+  margin: 5px;
+  font-weight: 600;
+  color: #000;
+}
+
+.registernowinputfirst input {
+  width: 40vw;
+  padding: 5px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+}
+.registernowinputfirst input:active {
+  border: 1px solid red;
+}
+
+.registernowinputfirstbutton button {
+  font-weight: 600;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 15%,
+    rgba(45, 76, 253, 1) 82%
+  );
+  padding: 5px;
+  width: 20vw;
+  margin: 10px 0px 5px 0px;
+  border: 2px solid blue;
+  color: #fff;
+}
+
+.registernowinputfirstbuttona {
+  width: 20vw !important;
+  font-weight: 600;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 15%,
+    rgba(45, 76, 253, 1) 82%
+  );
+  padding: 5px;
+  border: 2px solid blue;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+.registernowinputfirstbuttona a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.registernowbody {
+  background-color: #f4f1f1;
+  border-radius: 10px;
+}
+.blur-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  opacity: 5;
+  pointer-events: none;
+}
+
+.recomendedactionfirst.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.startscanremoveallth {
+  display: flex;
+  justify-content: space-between;
+}
+
+.startscanRemovedall {
+  cursor: pointer;
+}
+
+/* model box */
+
+.secondStatus {
+  border-radius: 10px;
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.statusModel {
+  background: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.statusmodelheader {
+  position: relative;
+}
+.modelcutbutton {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.statusmodelheader {
+  border-bottom: 1px solid #000;
+}
+.statusmodelheader h4 {
+  font-size: x-large;
+  font-weight: bolder;
+  padding: 20px;
+  color: #fff;
+  /* background-color: #3c4fe0; */
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  margin: 0px;
+  text-align: center;
+}
+
+.statusmodelcontent {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.startscanmodelregistertext {
+  color: #000;
+  font-size: larger;
+  font-weight: 900;
+  margin: 10px;
+  padding: 20px;
+}
+.rightsignlogo {
+  margin: 10px;
+  padding: 20px;
+}
+.rightsignlogofirst {
+  margin: 10px 0px;
+  color: #000;
+  font-weight: 900;
+}
+
+.arrowColor i {
+  color: green;
+  margin-right: 10px;
+}
+
+.startscanmodelbuttonmain {
+  text-align: center;
+}
+
+.startscanmodelbutton {
+  text-align: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding: 16px;
+  margin: 10px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.stopscansecond-buttonRemove {
+  right: 35px;
+  position: absolute;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #2499c7;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14 px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.marquee {
+  background-color: #10b3db;
+  font-size: 22px;
+  font-weight: 300;
+  color: white;
+  padding: 5px;
+  margin-bottom: 0 !important;
+}
+
+
+
+.iconColor {
+  color: green;
+  margin: 10px;
+}
+
+.marqueeinpopup {
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  font-weight: 900;
+  color: hsla(216, 96%, 56%, 1);
+
+  color: linear-gradient(to top left, #121fcf 0%, #cf1512 100%);
+
+  color: -moz-linear-gradient(
+    90deg,
+    hsla(216, 96%, 56%, 1) 0%,
+    hsla(178, 64%, 65%, 1) 100%
+  );
+
+  color: -webkit-linear-gradient(
+    90deg,
+    hsla(216, 96%, 56%, 1) 0%,
+    hsla(178, 64%, 65%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#2278FB", endColorstr="#6BDFDB", GradientType=1 );
+}
+
+.enquiryform{
+  font-size: 18px;
+  font-weight: 300;
+  color: #000;
+  padding: 27px 0px;
+
+}
+
+.boxItemImage img{
+  width: 70px;
+  height: 70px;
+}
+
+.active-box {
+  background-color: white;
+  color: black;
+}
+
+.buttommarqueesecond{
+  font-size: larger;
+  color: white;
+  width: 100vw;
+  bottom: 0px;
+  display: block;
+  position: fixed;
+  background-color: #232323;
+  padding: 11px;
+}
+.registry-scan-rows{
+  padding: 0px 30px;
+}
+.registry-scan-row{
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+
+}
+.filemanagerimg img{
+  width: 30px;
+  height: 30px;
+}
+.datetime{
+padding: 6px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .h3-box{
+    height: 48px;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .h3-box{
+    letter-spacing: 0px;
+  }
+}
+
+/* hover me button  */
+
