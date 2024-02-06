@@ -11,7 +11,6 @@ export default function StartScan({ value = 0 }) {
   const [data, setData] = useState("data");
   const [fileArrayIndex, setFileArrayIndex] = useState(0);
   const [scanTime, setScanTime] = useState([]);
-  // console.log("Scan Date & Time is :",scanTime)
   const [randomNumbers, setRandomNumbers] = useState({
     issuesfirst: 0,
     issuessecond: 0,
@@ -39,6 +38,7 @@ export default function StartScan({ value = 0 }) {
     if (!storeLicenseKey || !storeLicenseKey.status) {
       setShowRegisterPopupComponent(true);
     } else {
+      
       setRemoveRendomNumber(true);
       setTimeout(() => {
         setRemoveRendomNumber(false);
@@ -136,6 +136,8 @@ export default function StartScan({ value = 0 }) {
       setShowRegisterPopupComponent(true);
     } else {
       setRemoveRendomNumberall(true);
+      // Set the state to true when the button is clicked
+      
       setTimeout(() => {
         const checkboxesToUpdate = Object.keys(checkboxes).filter(
           (box) => checkboxes[box]
@@ -475,10 +477,7 @@ export default function StartScan({ value = 0 }) {
                 {" "}
                 <th>Registry Section</th> <th>Status</th> <th>Issues</th>{" "}
                 <th className="startscanremoveallth">Recommended Action</th>{" "}
-                <th className="startscanRemovedall" onClick={handleRemoveAll}>
-                  {" "}
-                  Remove{" "}
-                </th>{" "}
+                <th className="startscanRemovedall"> Remove </th>{" "}
               </tr>
               <div className="firstbox">
                 {" "}
@@ -559,17 +558,21 @@ export default function StartScan({ value = 0 }) {
                       }`}
                       onClick={() => handleRemove("issuesfirst")}
                       disabled={percentage === 20}
+                      htmlFor="vehicle1"
+                      
+                      
                     >
                       {" "}
-                      remove{" "}
+                      Remove{" "}
                     </span>
                   )}
                 </div>
                 <div className="startScanfirstbox">
                   {" "}
                   <input
+                  id="vehicle"
                     type="checkbox"
-                    style={{marginTop:"25px"}}
+                    style={{ marginTop: "25px" }}
                     checked={checkboxes.first}
                     onChange={() =>
                       setCheckboxes((prevCheckboxes) => ({
@@ -669,7 +672,7 @@ export default function StartScan({ value = 0 }) {
                       disabled={percentage === 48}
                     >
                       {" "}
-                      remove{" "}
+                      Remove{" "}
                     </span>
                   )}{" "}
                 </div>
@@ -677,7 +680,7 @@ export default function StartScan({ value = 0 }) {
                   {" "}
                   <input
                     type="checkbox"
-                    style={{marginTop:"25px"}}
+                    style={{ marginTop: "25px" }}
                     checked={checkboxes.second}
                     onChange={() =>
                       setCheckboxes((prevCheckboxes) => ({
@@ -761,14 +764,14 @@ export default function StartScan({ value = 0 }) {
                       onClick={() => handleRemovethree("issuesthird")}
                       disabled={percentage === 77}
                     >
-                      remove
+                      Remove
                     </span>
                   )}
                 </div>
                 <div className="startScanfirstbox">
                   <input
                     type="checkbox"
-                    style={{marginTop:"25px"}}
+                    style={{ marginTop: "25px" }}
                     checked={checkboxes.third}
                     onChange={() =>
                       setCheckboxes((prevCheckboxes) => ({
@@ -850,14 +853,14 @@ export default function StartScan({ value = 0 }) {
                       className="recomendedactionfirst"
                       onClick={() => handleRemovefour("issuesfour")}
                     >
-                      remove
+                      Remove
                     </span>
                   )}
                 </div>
                 <div className="startScanfirstbox">
                   <input
                     type="checkbox"
-                    style={{marginTop:"25px"}}
+                    style={{ marginTop: "25px" }}
                     checked={checkboxes.fourth}
                     onChange={() =>
                       setCheckboxes((prevCheckboxes) => ({
@@ -898,14 +901,13 @@ export default function StartScan({ value = 0 }) {
               </span>
             </button>
           </div>
+          <div className="removeclickbutton" onClick={handleRemoveAll}>
+            <button>Click on Remove</button>
+          </div>
 
           <div className="removebutton" onClick={handleRemoveAll2}>
             <button>Remove All</button>
           </div>
-          <div className="removeclickbutton"  onClick={handleRemoveAll}>
-            <button>Click on Remove</button>
-          </div>
-          
         </div>
       </div>
       {showRegisterPopupComponent && (

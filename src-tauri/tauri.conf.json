@@ -32,14 +32,18 @@
     "security": {
       "csp": null
     },
+    "systemTray": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true
+    },
     "windows": [
       {
         "fullscreen": false,
         "resizable": true,
         "title": "DevCleaner",
         "width": 1000,
-        "height": 500
-      }
+        "height": 700
+      } 
     ]
   }
 }
